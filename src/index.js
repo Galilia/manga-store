@@ -1,17 +1,25 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDom from 'react-dom';
+import {Provider} from "react-redux";
+import {BrowserRouter as Router} from "react-router-dom";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+import App from './components/app';
+import ErrorBoundary from "./components/error-boundry/error-boundary";
+import MangaStoreService from "./services/mangastore-service";
+import {MangaStoreServiceProvider} from "./components/mangastore-service-context";
+import store from "./store";
+
+const mangaStoreService = new MangaStoreService();
+
+ReactDom.render(
+  <Provider store={store}>
+    <ErrorBoundary>
+      <MangaStoreServiceProvider value={mangaStoreService}>
+        <Router>
+          <App/>
+        </Router>
+      </MangaStoreServiceProvider>
+    </ErrorBoundary>
+  </Provider>,
   document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

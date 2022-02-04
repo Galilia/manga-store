@@ -1,0 +1,30 @@
+.manga-list-item {
+    display: flex;
+    margin: 15px 0;
+}
+
+.manga-list-item .manga-cover{
+    flex-shrink: 0;
+    width: 120px;
+    margin-right: 30px;
+}
+
+.manga-list-item .manga-cover img {
+    max-width: 100%;
+}
+
+.manga-list-item .manga-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    align-items: flex-start;
+}
+
+.manga-list-item .manga-details .manga-title {
+    font-size: 1.2rem;
+}
+
+.manga-list-item .manga-details .manga-price {
+    font-size: 1.4rem;
+}
