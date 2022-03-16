@@ -2,15 +2,10 @@
 
 Manga store with Redux, Redux Thunk, React Router and etc.
 
-## Available Scripts
+## View
 
-In the project directory, you can run:
+![image](https://user-images.githubusercontent.com/20660693/158577034-74d3ff1f-b1c5-4627-8744-f049d7f0ef75.png)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
